@@ -1,13 +1,14 @@
 #################################################################
 # Dockerfile
-#
-# Version:          1
 # Software:         R
 # Description:      R and necessary packages to use DEXSeq
 # Base Image:       R-base:3.4.0
 #################################################################
 #R image to be the base in order to build our new image
 FROM r-base:3.4.0
+
+#Maintainer and author
+MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Install Ubuntu extensions in order to run r
 RUN apt-get update && apt-get install -y \
