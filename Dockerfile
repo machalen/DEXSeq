@@ -19,7 +19,7 @@ RUN apt-get update && apt-get install -y \
     build-essential \
     curl \
     zlib1g-dev \
-    r-base-dev \
+    gfortran \
     libncurses5-dev
     
 ENV PATH=pkg-config:$PATH
