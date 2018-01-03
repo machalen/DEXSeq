@@ -25,7 +25,7 @@ RUN apt-get update && apt-get install -y \
 ENV PATH=pkg-config:$PATH
 
 #Install packages from CRAN and bioconductor:
-Rscript -e 'install.packages(c("acepack", "RcppArmadillo", "statmod"))'
+RUN Rscript -e 'install.packages(c("acepack", "RcppArmadillo", "statmod"))'
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite(pkgs=c("BiocGenerics","biomaRt","Rsamtools","geneplotter","genefilter"));'
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite(pkgs=c("BiocParallel","Biobase","SummarizedExperiment","IRanges","GenomicRanges","DESeq2","AnnotationDbi","S4Vectors"));'
 RUN Rscript -e 'source("http://bioconductor.org/biocLite.R"); biocLite(pkgs=c("GenomicFeatures","pasilla","parathyroidSE","BiocStyle"));'
