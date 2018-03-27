@@ -12,7 +12,6 @@ MAINTAINER Magdalena Arnal <marnal@imim.es>
 
 #Install Ubuntu extensions in order to run r
 RUN apt-get update && apt-get install -y \
-    r-cran-xml \
     libssl-dev \
     libcurl4-openssl-dev \
     libxml2-dev \
